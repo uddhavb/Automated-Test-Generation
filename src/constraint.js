@@ -376,8 +376,6 @@ function constraints(filePath) {
                     {
                         // Get expression from original source code:
                         let expression = buf.substring(child.range[0], child.range[1]);
-
-
                         if(_.includes(params,  child.arguments[0].name))
                          {
                             // Get identifier
