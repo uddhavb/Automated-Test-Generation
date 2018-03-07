@@ -305,17 +305,17 @@ function constraints(filePath) {
                               // Push a new constraint
                               functionConstraints[funcName].constraints[ident].push(new Constraint({
                                   ident: child.argument.arguments[0].name,
-                                  value:  "'./'",
+                                  value:  "emptyDir",
                                   funcName: funcName,
-                                  kind: "string",
+                                  kind: "pathExists",
                                   operator : child.operator,
                                   expression: expression
                               }));
                               functionConstraints[funcName].constraints[ident].push(new Constraint({
                                   ident: child.argument.arguments[0].name,
-                                  value:  "'./dsdsd'",
+                                  value:  "nonEmptyDir",
                                   funcName: funcName,
-                                  kind: "string",
+                                  kind: "pathExists",
                                   operator : child.operator,
                                   expression: expression
                               }));
