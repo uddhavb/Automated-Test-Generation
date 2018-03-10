@@ -346,14 +346,14 @@ function constraints(filePath) {
                     else if (child.argument.type == 'MemberExpression')
                     {
                         property = child.argument.property.name;
-					              let trueOption = "{"+property+": true}";
-					              let falseOption = "{"+property+": false}";
+					              let correctOption = "{"+property+": true}";
+					              let wrongOption = "{"+property+": false}";
                         let ident = child.argument.object.name;
                         let expression = buf.substring(child.range[0], child.range[1]);
 
                         functionConstraints[funcName].constraints[ident].push(new Constraint({
                             ident: child.argument.object.name,
-                            value:  trueOption,
+                            value:  correctOption,
                             funcName: funcName,
                             kind: "string",
                             operator : child.operator,
@@ -361,7 +361,7 @@ function constraints(filePath) {
                         }));
                         functionConstraints[funcName].constraints[ident].push(new Constraint({
                             ident:  child.argument.object.name,
-                            value:  falseOption,
+                            value:  wrongOption,
                             funcName: funcName,
                             kind: "string",
                             operator : child.operator,

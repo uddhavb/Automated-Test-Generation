@@ -1,57 +1,57 @@
-let subject = require('D:\devops\HW2\subject.js')
+let subject = require('./subject.js')
 let mock = require('mock-fs');
-try { subject.inc(-1, undefined); } catch (e) {} 
-try { subject.inc(-1, NaN); } catch (e) {} 
-try { subject.inc(1, undefined); } catch (e) {} 
-try { subject.inc(1, NaN); } catch (e) {} 
-try { subject.weird(6, -1, 41, "strict"); } catch (e) {} 
-try { subject.weird(6, -1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, -1, 41, "werw"); } catch (e) {} 
-try { subject.weird(6, -1, 41, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(6, -1, 41, "strict"); } catch (e) {} 
-try { subject.weird(6, -1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, -1, 43, "strict"); } catch (e) {} 
-try { subject.weird(6, -1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, -1, 43, "werw"); } catch (e) {} 
-try { subject.weird(6, -1, 43, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(6, -1, 43, "strict"); } catch (e) {} 
-try { subject.weird(6, -1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, 1, 41, "strict"); } catch (e) {} 
-try { subject.weird(6, 1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, 1, 41, "werw"); } catch (e) {} 
-try { subject.weird(6, 1, 41, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(6, 1, 41, "strict"); } catch (e) {} 
-try { subject.weird(6, 1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, 1, 43, "strict"); } catch (e) {} 
-try { subject.weird(6, 1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(6, 1, 43, "werw"); } catch (e) {} 
-try { subject.weird(6, 1, 43, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(6, 1, 43, "strict"); } catch (e) {} 
-try { subject.weird(6, 1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, -1, 41, "strict"); } catch (e) {} 
-try { subject.weird(8, -1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, -1, 41, "werw"); } catch (e) {} 
-try { subject.weird(8, -1, 41, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(8, -1, 41, "strict"); } catch (e) {} 
-try { subject.weird(8, -1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, -1, 43, "strict"); } catch (e) {} 
-try { subject.weird(8, -1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, -1, 43, "werw"); } catch (e) {} 
-try { subject.weird(8, -1, 43, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(8, -1, 43, "strict"); } catch (e) {} 
-try { subject.weird(8, -1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, 1, 41, "strict"); } catch (e) {} 
-try { subject.weird(8, 1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, 1, 41, "werw"); } catch (e) {} 
-try { subject.weird(8, 1, 41, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(8, 1, 41, "strict"); } catch (e) {} 
-try { subject.weird(8, 1, 41, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, 1, 43, "strict"); } catch (e) {} 
-try { subject.weird(8, 1, 43, 'NEQ - strict'); } catch (e) {} 
-try { subject.weird(8, 1, 43, "werw"); } catch (e) {} 
-try { subject.weird(8, 1, 43, 'NEQ - werw'); } catch (e) {} 
-try { subject.weird(8, 1, 43, "strict"); } catch (e) {} 
-try { subject.weird(8, 1, 43, 'NEQ - strict'); } catch (e) {} 
+try { subject.inc(-1, undefined); } catch (e) {}
+try { subject.inc(-1, NaN); } catch (e) {}
+try { subject.inc(1, undefined); } catch (e) {}
+try { subject.inc(1, NaN); } catch (e) {}
+try { subject.weird(6, -1, 41, "strict"); } catch (e) {}
+try { subject.weird(6, -1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, -1, 41, "werw"); } catch (e) {}
+try { subject.weird(6, -1, 41, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(6, -1, 41, "strict"); } catch (e) {}
+try { subject.weird(6, -1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, -1, 43, "strict"); } catch (e) {}
+try { subject.weird(6, -1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, -1, 43, "werw"); } catch (e) {}
+try { subject.weird(6, -1, 43, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(6, -1, 43, "strict"); } catch (e) {}
+try { subject.weird(6, -1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, 1, 41, "strict"); } catch (e) {}
+try { subject.weird(6, 1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, 1, 41, "werw"); } catch (e) {}
+try { subject.weird(6, 1, 41, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(6, 1, 41, "strict"); } catch (e) {}
+try { subject.weird(6, 1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, 1, 43, "strict"); } catch (e) {}
+try { subject.weird(6, 1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(6, 1, 43, "werw"); } catch (e) {}
+try { subject.weird(6, 1, 43, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(6, 1, 43, "strict"); } catch (e) {}
+try { subject.weird(6, 1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, -1, 41, "strict"); } catch (e) {}
+try { subject.weird(8, -1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, -1, 41, "werw"); } catch (e) {}
+try { subject.weird(8, -1, 41, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(8, -1, 41, "strict"); } catch (e) {}
+try { subject.weird(8, -1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, -1, 43, "strict"); } catch (e) {}
+try { subject.weird(8, -1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, -1, 43, "werw"); } catch (e) {}
+try { subject.weird(8, -1, 43, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(8, -1, 43, "strict"); } catch (e) {}
+try { subject.weird(8, -1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, 1, 41, "strict"); } catch (e) {}
+try { subject.weird(8, 1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, 1, 41, "werw"); } catch (e) {}
+try { subject.weird(8, 1, 41, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(8, 1, 41, "strict"); } catch (e) {}
+try { subject.weird(8, 1, 41, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, 1, 43, "strict"); } catch (e) {}
+try { subject.weird(8, 1, 43, 'NEQ - strict'); } catch (e) {}
+try { subject.weird(8, 1, 43, "werw"); } catch (e) {}
+try { subject.weird(8, 1, 43, 'NEQ - werw'); } catch (e) {}
+try { subject.weird(8, 1, 43, "strict"); } catch (e) {}
+try { subject.weird(8, 1, 43, 'NEQ - strict'); } catch (e) {}
 try{
 	mock({emptyDir:mock.directory(),nonEmptyDir:mock.directory({ items: { file: mock.file() } }),file:mock.file(),pathContent:{file1:new Buffer('abc'),someDir:mock.directory()}});
 		subject.fileTest(emptyDir, 'emptyDir');
@@ -552,10 +552,10 @@ try{
 		subject.fileTest('file', 'pathContent/someDir');
 	mock.restore();
 } catch(e) {}
-try { subject.normalize(''); } catch (e) {} 
-try { subject.format('', '', true); } catch (e) {} 
-try { subject.format('', '', false); } catch (e) {} 
-try { subject.format('', '', {normalize: true}); } catch (e) {} 
-try { subject.format('', '', {normalize: false}); } catch (e) {} 
-try { subject.blackListNumber("2123412014"); } catch (e) {} 
-try { subject.blackListNumber("(145) 728-1156"); } catch (e) {} 
+try { subject.normalize(''); } catch (e) {}
+try { subject.format('', '', true); } catch (e) {}
+try { subject.format('', '', false); } catch (e) {}
+try { subject.format('', '', {normalize: true}); } catch (e) {}
+try { subject.format('', '', {normalize: false}); } catch (e) {}
+try { subject.blackListNumber("2124808677"); } catch (e) {}
+try { subject.blackListNumber("(840) 784-5789"); } catch (e) {}
