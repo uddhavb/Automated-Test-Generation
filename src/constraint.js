@@ -222,57 +222,26 @@ function constraints(filePath) {
                }
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-              // if(_.get(child, 'type') === 'BinaryExpression' && _.includes(['<','>','<=','>='], _.get(child, 'operator'))) {
-              //     if((_.get(child, 'left.type') === 'MemberExpression') && _.get(child, 'left.property.name') === 'length') {
-              //       let ident = 'dir';//child.left.object.name;
-              //       let expression = buf.substring(child.range[0], child.range[1]);
-              //       // console.log("ident: " + ident+"\n"+"funcName: "+ funcName);
-              //       // console.log("expression: " + expression+"\n");
-              //       // console.log("params: " + params+"\n");
-              //       if (_.includes(params, 'filePath')) {
-              //
-              //           // Push a new constraints
-              //           let constraints = functionConstraints[funcName].constraints[ident];
-              //           constraints.push(new Constraint({
-              //               ident: child.left.object.name,
-              //               value: parseInt(child.right.value)+11,
-              //               funcName: funcName,
-              //               kind: "integer",
-              //               operator : child.operator,
-              //               expression: expression
-              //           }));
-              //           constraints.push(new Constraint({
-              //               ident: child.left.object.name,
-              //               value: parseInt(child.right.value)-11,
-              //               funcName: funcName,
-              //               kind: "integer",
-              //               operator : child.operator,
-              //               expression: expression
-              //           }));
-              //       }
-              //
-              //     }
-              // }
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
               // literals
               if(_.get(child,'left.type') === 'Identifier' && child.right.type === 'Literal'){
 
-                      if (_.includes(params, "phoneNumber")) {
+                      if (params.length == 1) {
 
                                 let expression = buf.substring(child.range[0], child.range[1]);
                                 let rightHand = buf.substring(child.right.range[0], child.right.range[1]);
                                 let match = rightHand.match(/^['"](.*)['"]$/);
                                 let number = rightHand + faker.random.number({min:0000000,max:9999999});
                                 let right = number.replace(/['"]+/g, '');
-                              //   console.log("expression: " + expression + " righthand: " + rightHand + " match: " + match +
-                              // " number: " + number + " right: " + right +"\nfuncname: "+ funcName +"\n");
+                                 console.log("expression: " + expression + " righthand: " + rightHand + " match: " + match +
+                               " number: " + number + " right: " + right +"\nfuncname: "+ funcName +"\n");
 
                                 // Get identifier
-                                let ident = 'phoneNumber';
+                                let ident = params[0];
                                 // Push a new constraint
                                 functionConstraints[funcName].constraints[ident].push(new Constraint({
-                                    ident: 'phoneNumber',
+                                    ident: params[0],
                                     value:  `"${right}"`,
                                     funcName: funcName,
                                     kind: "phoneNumber",
@@ -280,7 +249,7 @@ function constraints(filePath) {
                                     expression: expression
                                 }));
                                 functionConstraints[funcName].constraints[ident].push(new Constraint({
-                                    ident: 'phoneNumber',
+                                    ident: params[0],
                                     value:  `"${faker.phone.phoneNumberFormat(1)}"`,
                                     funcName: funcName,
                                     kind: "phoneNumber",
